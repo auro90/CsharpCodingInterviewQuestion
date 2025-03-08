@@ -1,0 +1,14 @@
+1. ReverseASingleWordWithoutUsingBuildInFunction
+•	Converts the input string to a character array.
+•	Initializes an empty string results.
+•	Iterates over the character array in reverse order, appending each character to results.
+
+2. ReverseEntireStringWithoutUsingBuildInFunction
+•	Converts the input string to a character array.
+•	Initializes an empty string results.
+•	Iterates over the character array in reverse order, appending each character to results.
+
+3. ReverseWordsInAStringWithoutUsingBuildInFunction
+•	Splits the input string into an array of words using space as the delimiter.
+•	Initializes an empty string results.
+•	Iterates over the array of words in reverse order, appending each word to results followed by a space.
