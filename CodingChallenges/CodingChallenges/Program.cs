@@ -1,2 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+Reverse reverse = new Reverse();
+reverse.ReverseASingleWordWithoutUsingBuildInFunction("World");
+reverse.ReverseEntireStringWithoutUsingBuildInFunction("Hello World");
+reverse.ReverseWordsInAStringWithoutUsingBuildInFunction("Hello World");
