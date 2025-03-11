@@ -12,3 +12,48 @@
 •	Splits the input string into an array of words using space as the delimiter.
 •	Initializes an empty string results.
 •	Iterates over the array of words in reverse order, appending each word to results followed by a space.
+
+4. ReverseStringRecursively
+- If the string length is greater than 1, the method calls itself with the substring of `toReverse` starting from the second character (`toReverse.Substring(1)`).
+- It then appends the first character of the current string (`toReverse[0]`) to the result of the recursive call.
+- This effectively moves the first character to the end of the string in each recursive step.
+Example
+Let's see how this works with an example:
+•	Input: "hello"
+•	Recursive calls:
+1.	ReverseStringrecursively("ello") + "h"
+2.	ReverseStringrecursively("llo") + "e"
+3.	ReverseStringrecursively("lo") + "l"
+4.	ReverseStringrecursively("o") + "l"
+5.	Base case reached: returns "o"
+•	Combining results:
+•	"o" + "l" = "ol"
+•	"ol" + "l" = "oll"
+•	"oll" + "e" = "olle"
+•	"olle" + "h" = "olleh"
+•	Final output: "olleh"
+Key Points
+•	Recursion: The method uses recursion to reverse the string.
+•	Base Case: Stops recursion when the string length is 1.
+•	Recursive Case: Moves the first character to the end and continues with the rest of the string.
+
+5. ReverseEveryKCharacters
+The input string `toReverse` is converted to a character array `arr` to allow in-place modifications.
+A for loop iterates over the array with a step size of `k`. This means the loop variable `i` increments by `k` in each iteration.
+For each segment of `k` characters, `left` is set to the current index `i`, and `right` is set to the minimum of `i + k - 1` and the last index of the array. This ensures that the `right` index does not exceed the array bounds.
+A `while` loop swaps the characters at the `left` and `right` indices and then moves `left` forward and `right` backward until they meet or cross. This effectively reverses the segment of `k` characters.
+After all segments have been reversed, the modified character array `arr` is converted back to a string and returned.
+Example
+For example, if toReverse is "abcdefg" and k is 2, the method will reverse every 2 characters:
+•	First segment: "ab" becomes "ba"
+•	Second segment: "cd" becomes "dc"
+•	Third segment: "ef" becomes "fe"
+•	The last character "g" remains unchanged as it is less than k.
+The final result will be "badcfe".
+
+6. ReverseWordsInAString
+•	Two integer variables, left and right, are initialized. left is set to 0 (the start of the array), and right is set to arr.Length - 1 (the end of the array).
+•	The loop continues as long as left is less than right. This ensures that the loop runs until the two pointers meet in the middle of the array.
+•	Inside the loop, the elements at the left and right indices are swapped using tuple deconstruction.
+•	After swapping, left is incremented by 1, and right is decremented by 1. This moves the left pointer towards the end of the array and the right pointer towards the start of the array.
+•	The loop terminates when left is no longer less than right, meaning all elements have been swapped, and the array is reversed.
